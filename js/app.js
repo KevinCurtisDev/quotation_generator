@@ -1,8 +1,11 @@
 //get the input used to select the number of quotes
 const quoteNumber = document.querySelector("#quote-number");
 
-//get the div that will contain the generated quotes
+//get the button that will generated quotes
 const generateQuote = document.querySelector("#generate-quote");
+
+//get the button that will quit the generator
+const quit = document.querySelector("#quit");
 
 //get the input that selects the quotation type
 const quotation = document.querySelector("#quote");
@@ -29,6 +32,9 @@ generateQuote.addEventListener("click", (e) => {
 
     //reset the quotation div to empty before generating new quotes
     quotation.innerHTML = "";
+
+    //display quit button
+    quit.style.display = "block";
 
     //set the quooteType variable to either miscQuptes or lifeQuotes
     if (document.querySelector("#misc").checked) {
@@ -57,4 +63,13 @@ generateQuote.addEventListener("click", (e) => {
             `${quoteType[0][randomStart]} ${quoteType[1][randomMiddle]} ${quoteType[2][randomEnd]}`;
         quotation.append(sentence);
     }
+});
+
+//listen for click event to quit the quotation generator
+quit.addEventListener("click", (e) => {
+    //prevent page from reloading
+    e.preventDefault();
+
+    //reset the quotation div to empty before generating new quotes
+    quotation.innerHTML = "";
 });
