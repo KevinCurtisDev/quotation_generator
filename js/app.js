@@ -8,16 +8,16 @@ const generateQuote = document.querySelector("#generate-quote");
 const quotation = document.querySelector("#quote");
 
 //create three dimensional array that lists possible life quote combinations
-const lifeQuotes = [['"You should', '"Sometimes you just need to', '"When the time comes,', '"Why not', '"Try to'], 
-                    ['look for', 'think about', 'take hold of'], 
-                    ['the opportunities in front of you!"', 'all of the possibilities!"', 'the little wins in life."', 'nothing!"', 'anything at all."', 'your innate abilities."', 'love!"']
-                ];
+const lifeQuotes = [['"You should', '"Sometimes you just need to', '"When the time comes,', '"Why not', '"Try to'],
+['look for', 'think about', 'take hold of'],
+['the opportunities in front of you!"', 'all of the possibilities!"', 'the little wins in life."', 'nothing!"', 'anything at all."', 'your innate abilities."', 'love!"']
+];
 
 //create three dimensional array that lists possible miscelaneous quote combinations
-const miscQuotes = [['"Why do', '"When do', '"Do you think,', '"Do all'], 
-                    ['men', 'people', 'women', 'animals'], 
-                    ['fart?"', 'not think?"', 'generate random quotes in their spare time?"', 'think?"', 'do anything at all?"', 'love?"']
-                ];
+const miscQuotes = [['"Why do', '"When do', '"Do you think', '"Do all'],
+['vegetables', 'people', 'worms', 'animals'],
+['fart?"', 'not think?"', 'generate random quotes in their spare time?"', 'think?"', 'do anything at all?"', 'love?"']
+];
 
 //listen for click event on the generate quote button
 generateQuote.addEventListener("click", (e) => {
@@ -47,9 +47,9 @@ generateQuote.addEventListener("click", (e) => {
 
     //loop through the selected quotation array and contatonate the sentences
     for (let i = 0; i < reps; i++) {
-        let randomStart = [Math.floor(Math.random() * miscQuotes[0].length)];
-        let randomMiddle = [Math.floor(Math.random() * miscQuotes[1].length)];
-        let randomEnd = [Math.floor(Math.random() * miscQuotes[2].length)];
+        let randomStart = [Math.floor(Math.random() * quoteType[0].length)];
+        let randomMiddle = [Math.floor(Math.random() * quoteType[1].length)];
+        let randomEnd = [Math.floor(Math.random() * quoteType[2].length)];
 
         //create a new paragraph element for each quote
         let sentence = document.createElement('p');
