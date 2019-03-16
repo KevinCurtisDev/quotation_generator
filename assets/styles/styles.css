@@ -1,3 +1,4 @@
+/* Form styles */
 .form {
   width: 250px;
   margin: 40px auto;
@@ -7,6 +8,7 @@
   border-radius: 5px;
 }
 
+/* Buttons styles */
 button {
   width: 100%;
   margin-top: 20px;
@@ -19,13 +21,15 @@ button {
   cursor: pointer;
 }
 
+.quit {
+  background-color: red;
+  display: none;
+}
+
+/* Quotation styles */
 .generated-quote {
   text-align: center;
   font-size: 2rem;
   color: #4d4d4d;
 }
 
-.quit {
-  background-color: red;
-  display: none;
-}
