@@ -36,7 +36,7 @@ generateQuote.addEventListener("click", (e) => {
     //display quit button
     quit.style.display = "block";
 
-    //set the quooteType variable to either miscQuptes or lifeQuotes
+    //set the quoteType variable to either miscQuotes or lifeQuotes
     if (document.querySelector("#misc").checked) {
         quoteType = miscQuotes;
     } else {
@@ -70,6 +70,6 @@ quit.addEventListener("click", (e) => {
     //prevent page from reloading
     e.preventDefault();
 
-    //reset the quotation div to empty before generating new quotes
+    //reset the quotation div to empty
     quotation.innerHTML = "";
 });
